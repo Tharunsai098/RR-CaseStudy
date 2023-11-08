@@ -1,0 +1,21 @@
+
+<app-navbar-admin></app-navbar-admin>
+  
+<div class="row">
+  <div *ngFor="let user of dataSource" class="col-md-4 card">
+    <div class="card-header">
+      <b>Username: {{ user.username }}</b>
+    </div>
+    <div class="card-body" align="center">
+      <p class="card-text">Role: {{ user.role }}</p>
+      <p class="card-text">Email: {{ user.email }}</p>
+      <p class="card-text">Gender: {{ user.gender }}</p>
+      <img *ngIf="user.gender === 'Male'; else femaleImage" src="assets/Male.jpg" alt="Male" width="100px" />
+      <ng-template #femaleImage>
+        <img src="assets/Female.jpg" alt="Female" width="100px" />
+      </ng-template>
+      <p class="card-text">Age: {{ user.age }}</p>
+      <p class="card-text">Country: {{ user.country }}</p>
+    </div>
+  </div>
+</div>

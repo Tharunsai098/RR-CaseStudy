@@ -1,0 +1,114 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel"><b>Issue Details</b></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Use interpolation to display the booking details -->
+        <div class="details">
+          <p><b>User Name: {{ data?.loginModel?.username }}</b></p>
+          <p><b>Age: {{ data?.loginModel?.age }}</b></p>
+          <p><b>County: {{ data?.loginModel?.country }}</b></p>
+          <p><b>Gender: {{ data?.loginModel?.gender }}</b></p>
+          <p><b><span class="email-color">email: {{ data?.loginModel?.email }}</span></b></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- **************************************************************************************** -->
+
+
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel"><b>Issue Details</b></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+       
+
+        <div class="bg">
+          <h1>Issue Form</h1>
+            <form [formGroup]="formValue">
+              <div class="c">
+              <!-- IssueId Field -->
+              <div class="mb-3">
+              <label for="issueId" class="form-label"><b>IssueId</b></label>
+              <input type="text" formControlName="issueId" id="issueId" class="form-control" readonly > 
+              </div>
+
+              <!-- Issue Field -->
+              <div class="mb-3">
+              <label for="issue" class="form-label"><b>Issue</b></label>
+              <input type="text" formControlName="issue" id="issue" class="form-control"  readonly>
+              </div>
+        
+              <!-- Status Field (Auto-populated) -->
+              <div class="mb-3">
+                <label for="status" class="form-label"><b>Status</b></label>
+                <input type="text" formControlName="status" id="status" class="form-control"  />
+              </div>
+
+              <div class="mb-3">
+                <label for="solution" class="form-label"><b>Solution</b></label>
+                <input type="text" formControlName="solution" id="solution" class="form-control" />
+              </div>
+        
+              <div>
+                <button type="submit" class="btn btn-success" (click)="updateIsssue()" (click)="goBack()">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-secondary" (click)="goBack()">GoBack</button>
+              </div>
+              </div>
+            </form>
+          </div>
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- .................................................................................. -->
+
+<app-navbar-admin></app-navbar-admin>
+
+<div class="row">
+  <div *ngFor="let issue of dataSource" class="col-md-4 card">
+    <div class="card-header">
+      <b>Username: {{ issue.username }}</b>
+      <button mat-icon-button (click)="details(issue.username)" type="button" class="btn btn-primary"
+        data-bs-toggle="modal" data-bs-target="#exampleModal"><mat-icon
+          class="custom-icon details-icon">touch_app</mat-icon></button>
+    </div>
+    <div class="card-body" align="center">
+      <p class="card-text">IssueId: {{ issue.issueId }}</p>
+      <p class="card-text">Issue: {{ issue.issue }}</p>
+      <p class="card-text">Status: {{ issue.status }}
+        <button *ngIf="isRole === 'Admin'" mat-icon-button (click)="EditForm(issue)" type="button"
+          class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2"><mat-icon
+            class="custom-icon primary-icon">edit</mat-icon></button>
+      </p>
+      <p class="card-text">Solution: {{ issue.solution }}</p>
+    </div>
+  </div>
+</div>

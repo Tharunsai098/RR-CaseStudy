@@ -1,0 +1,31 @@
+.Login{
+    background: url('/assets/20334Train.webp');
+    margin-left: 55%;   
+    margin-right: 5%;  
+    color: black;
+    width: 40%;
+    border: 1px solid lightgray;
+    padding: 5%;
+    border-radius: 5px;
+    
+    box-shadow: 2px 8px 10px 10px rgb(74, 67, 67); 
+}
+
+.error-message {
+    color: red;
+    font-style: italic;
+  }
+h1{
+    text-align: center;
+    color: rgb(35, 35, 36);
+}
+.bg{  
+    background-image: url('https://images7.alphacoders.com/661/thumb-1920-661783.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    
+} 
+p{
+    color: rgb(146, 192, 232);
+}  

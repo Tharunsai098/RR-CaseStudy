@@ -1,0 +1,25 @@
+.details-icon{
+    color: blueviolet;
+  }
+.card-header{
+    text-align: center;
+}
+
+.modal{
+    background-color: rgb(76, 79, 79);
+  }
+  .details{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+  }
+ .email-color{
+  color: rgb(80, 82, 218);
+ }
+ .primary-icon {
+  color: #007bff; /* Change this to your desired primary color */
+}
+.error-message {
+  color: red;
+  font-style: italic;
+}

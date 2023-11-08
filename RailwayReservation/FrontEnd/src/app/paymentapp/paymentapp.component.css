@@ -1,0 +1,43 @@
+/* Define styles for the background container */
+.bg1 {
+    background-color: #ebf1e9; /* Background color for the container */
+    background-image: url('https://img.freepik.com/premium-photo/hands-using-phone-credit-card-online-payment_187217-47.jpg?size=626&ext=jpg&ga=GA1.1.1274437219.1670999544&semt=sph');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Make the container fill the viewport height */
+    width:100%;
+  }
+  
+  /* Style for the inner container */
+  .container {
+    background-color: #bdf9bd; /* Background color for the inner container */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for the inner container */
+    padding: 20px;
+    text-align: center;
+    width: 30%; /* Set the container width to 50% */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically within the container */
+    align-items: center; /* Center content horizontally within the container */
+    position: absolute;
+    top: 10%;
+    left: 30%; /* Move 30% from the left */
+    bottom: 60%; /* Move 75% from the bottom */
+    transform: translateX(-50%); /* Center horizontally */
+    width: 30%;
+  }
+  
+  /* Style for the heading */
+  .heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333; /* Text color for the heading */
+  }
+  
+
+  
+  
